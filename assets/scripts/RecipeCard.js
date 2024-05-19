@@ -10,7 +10,7 @@ class RecipeCard extends HTMLElement {
 		// A1. TODO - Attach the shadow DOM to this Web Component (leave the mode open)
 		//let host = document.querySelector("host");
 		//let shadow = host.attachShadow({model: "open"});
-		let shadow = this.attachShadow({model: "open"});
+		let shadow = this.attachShadow({ mode: "open" });
 		// A2. TODO - Create an <article> element - This will hold our markup once our data is set
 		let article = document.createElement("article");
 		// A3. TODO - Create a style element - This will hold all of the styles for the Web Component
@@ -92,8 +92,8 @@ class RecipeCard extends HTMLElement {
 				color: #70757A;
 				font-size: 12px;
 			  }
-		`;	
-		
+		`;
+
 		// A5. TODO - Append the <style> and <article> elements to the Shadow DOM
 		shadow.appendChild(style);
 		shadow.appendChild(articleElement);
@@ -146,10 +146,10 @@ class RecipeCard extends HTMLElement {
 		<time>${data.lengthTime}</time>
 		<p class="ingredients">${data.ingredients}</p>
 	  `;
-	}		
+	}
 }
 
 // A8. TODO - Define the Class as a customElement so that you can create
 //           'recipe-card' elements
 customElements.define('recipe-card', RecipeCard);
-	
+
