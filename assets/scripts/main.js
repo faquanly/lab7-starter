@@ -83,7 +83,7 @@ function initFormHandler() {
 		const recipeObject = {};
 		formData.forEach((value, key) => {
 			recipeObject[key] = value;
-		})
+		});
 	// B6. TODO - Create a new <recipe-card> element
 		const recipeCard = document.createElement('recipe-card');
 	// B7. TODO - Add the recipeObject data to <recipe-card> using element.data
@@ -106,11 +106,11 @@ function initFormHandler() {
 		clearButton.addEventListener('click', () => {
 			// Steps B12 & B13 will occur inside the event listener from step B11
 			// B12. TODO - Clear the local storage
-			localStorage.clear()
+			localStorage.clear();
 			// B13. TODO - Delete the contents of <main>
 			const mainElement = document.querySelector('main');
 			mainElement.innerHTML = '';
-		})
+		});
 
 	
 }
